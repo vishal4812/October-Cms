@@ -1,0 +1,19 @@
+url = "/blog/post/:slug"
+layout = "default"
+title = "BlogPost"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[session]
+security = "user"
+redirect = "account"
+
+[commentsPost]
+==
+{% component "blogPost" %}
+
+<h2>Comments:</h2>
+
+{% component "commentsPost" %}
